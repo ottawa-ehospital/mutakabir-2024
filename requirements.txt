@@ -1,0 +1,6 @@
+fastapi==0.68.0
+toml
+uvicorn
+torch
+torchvision
+python-multipart
