@@ -3,19 +3,19 @@ from PIL import Image
 import toml
 import io
 from torchvision import transforms
-from torchvision.models import vgg13, VGG13_Weights
+from torchvision.models import resnet101, ResNet101_Weights
 from torch import load, device
 
-MODEL_PATH = "./models/VGG13_Weights_1e-06.pt"
+MODEL_PATH = "./models/ResNet101_Weights_0.0001.pt"
 PATH_TO_MODEL_CONFIG_TOML = "./model.toml"
 
 model_config = toml.load(PATH_TO_MODEL_CONFIG_TOML)
 
 def get_model(model_path:str=MODEL_PATH):
     # Initialize and return PyTorch model
-    model = vgg13(
-        weights=VGG13_Weights.IMAGENET1K_V1,
-        progress=True
+    model = resnet101(
+        weights=ResNet101_Weights.IMAGENET1K_V2,
+        progress=True,
     )
     # Load pre-trained weights 
     model = load(model_path, map_location=device('cpu'))
