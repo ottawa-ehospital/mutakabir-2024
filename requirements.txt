@@ -1,6 +1,7 @@
+-f https://download.pytorch.org/whl/torch_stable.html
 fastapi==0.68.0
-toml
-uvicorn
-torch
-torchvision
-python-multipart
+toml==0.10.2
+uvicorn==0.27.1
+torch==2.2.0+cpu 
+torchvision==0.17.0+cpu
+python-multipart==0.0.9
