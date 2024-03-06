@@ -18,7 +18,10 @@ def get_model(model_path:str=MODEL_PATH):
         progress=True
     )
     # Load pre-trained weights 
-    model = load(model_path, map_location=device('cpu'))
+    model = load(
+        model_path, 
+        # map_location=device('cpu')
+    )
     return model
 
 model = get_model().to("cpu")
