@@ -12,11 +12,6 @@ PATH_TO_MODEL_CONFIG_TOML = "./model.toml"
 model_config = toml.load(PATH_TO_MODEL_CONFIG_TOML)
 
 def get_model(model_path:str=MODEL_PATH):
-    # Initialize and return PyTorch model
-    model = resnet101(
-        weights=ResNet101_Weights.IMAGENET1K_V2,
-        progress=True,
-    )
     # Load pre-trained weights 
     model = load(model_path, map_location=device('cpu'))
     return model
