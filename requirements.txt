@@ -1,4 +1,4 @@
-# -f https://download.pytorch.org/whl/torch_stable.html
+-f https://download.pytorch.org/whl/torch_stable.html
 fastapi==0.68.0
 toml==0.10.2
 uvicorn==0.27.1
