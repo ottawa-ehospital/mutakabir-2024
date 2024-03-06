@@ -4,8 +4,8 @@ from api import prediction
 
 app = FastAPI()
 
-# Include API routers
-# app.include_router(prediction.router, tags=["prediction"])
+Include API routers
+app.include_router(prediction.router, tags=["prediction"])
 
 @app.get("/")
 def read_root():
