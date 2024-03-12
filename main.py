@@ -7,8 +7,8 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "http://www.e-hospital.ca/",
-        "https://www.e-hospital.ca/",
+        "http://www.e-hospital.ca",
+        "https://www.e-hospital.ca",
         "http://localhost:3000",
         "https://localhost:3000",
     ],
